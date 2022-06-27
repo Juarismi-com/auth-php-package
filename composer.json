@@ -1,0 +1,27 @@
+{
+    "name": "juarismi/auth",
+    "authors": [
+        {
+            "name": "Iván Fretes",
+            "email": "vanfretes@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Juarismi\\Auth\\": "src/"
+        }
+    },
+    "require": {
+        "tymon/jwt-auth": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Juarismi\\Auth\\AuthServiceProvider"
+            ]
+        }
+    }
+}
