@@ -1,5 +1,6 @@
 {
     "name": "juarismi/auth",
+    "type": "library",
     "authors": [
         {
             "name": "Iván Fretes",
@@ -23,5 +24,5 @@
                 "Juarismi\\Auth\\AuthServiceProvider"
             ]
         }
-    }
+    } 
 }
