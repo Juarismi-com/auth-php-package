@@ -5,6 +5,7 @@ namespace Juarismi\Auth;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
 use Juarismi\Utils\Http\Middleware\Cors;
+use Illuminate\Support\Facades\Schema;
 
 class AuthServiceProvider extends ServiceProvider
 {
