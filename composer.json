@@ -24,5 +24,10 @@
                 "Juarismi\\Auth\\AuthServiceProvider"
             ]
         }
-    } 
+    },
+    {
+        "github-oauth": {
+            "github.com": "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"
+        }
+    }
 }
