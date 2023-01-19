@@ -6,7 +6,7 @@ Route::name('jAuth.')
 	->prefix('auth')
 	->group(function ($router) {
    
-   Route::post('login', function(){
+   Route::get('/', function(){
       return 'juarismi/auth';
    });
    
