@@ -14,7 +14,7 @@ class JwtAuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['jAuth.login']]);
+        $this->middleware('auth:api', ['except' => ['login']]);
     }
 
     /**
@@ -26,7 +26,7 @@ class JwtAuthController extends Controller
     {
         $credentials = request(['email', 'password']);
 
-        if (! $token = auth('api')->attempt($credentials)) {
+        if (!$token = auth('api')->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
