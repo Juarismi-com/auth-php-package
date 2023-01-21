@@ -5,7 +5,6 @@ namespace Juarismi\Auth;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
 use Juarismi\Utils\Http\Middleware\Cors;
-use Illuminate\Support\Facades\Schema;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -14,7 +13,6 @@ class AuthServiceProvider extends ServiceProvider
       $this->app->singleton('cors', function ($app) {
          return new Cors();
       });
-      Schema::defaultStringLength(191);
 
 	   $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
 	   $this->registerRoutes();
