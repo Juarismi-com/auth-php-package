@@ -40,7 +40,9 @@ class JwtAuthController extends Controller
      */
     public function me()
     {
-        return response()->json(auth('api')->user());
+      $user = auth('api')->user();
+      $user['roles'] = $user->roles;
+      return response()->json($user);
     }
 
 
@@ -79,7 +81,6 @@ class JwtAuthController extends Controller
             'access_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => auth('api')->factory()->getTTL()
-            //'expires_in' => config('jwt.ttl')
         ]);
     }
 }
